@@ -11,28 +11,24 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by bharath on 05-Apr-18.
- */
+
 
 public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapter.MyViewHolder> {
+    public ItemClicked itemClicked;
     private Context context;
     private List<Data> mdata = new ArrayList<>();
-    public ItemClicked itemClicked;
 
-    public RecyclerviewAdapter(Context context, List<Data> mdata,ItemClicked itemClicked) {
+    public RecyclerviewAdapter(Context context, List<Data> mdata, ItemClicked itemClicked) {
         this.context = context;
         this.mdata = mdata;
-        this.itemClicked=itemClicked;
+        this.itemClicked = itemClicked;
     }
 
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context).inflate(R.layout.list_item,parent,false);
+        View v = LayoutInflater.from(context).inflate(R.layout.list_item, parent, false);
         MyViewHolder myViewHolder = new MyViewHolder(v);
         return myViewHolder;
     }
@@ -57,17 +53,18 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
         return mdata.size();
     }
 
-    public class MyViewHolder  extends RecyclerView.ViewHolder{
+    public class MyViewHolder extends RecyclerView.ViewHolder {
         private TextView title;
         private TextView source;
         private TextView time;
         private ImageView img;
+
         public MyViewHolder(View itemView) {
             super(itemView);
-            title=itemView.findViewById(R.id.title_view);
-            time=itemView.findViewById(R.id.time_view);
-            source=itemView.findViewById(R.id.source_view);
-            img=itemView.findViewById(R.id.image_view);
+            title = itemView.findViewById(R.id.title_view);
+            time = itemView.findViewById(R.id.time_view);
+            source = itemView.findViewById(R.id.source_view);
+            img = itemView.findViewById(R.id.image_view);
         }
     }
 }
