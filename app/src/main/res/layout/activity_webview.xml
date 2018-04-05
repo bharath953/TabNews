@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.tabnews.Webview">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:backgroundTint="#ffffff"
+        android:elevation="2dp"/>
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#ffffff"/>
+
+    <Button
+        android:id="@+id/forward"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/forward"
+        android:onClick="Onforward"
+        android:elevation="0dp"/>
+
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/back"
+        android:onClick="OnBack"
+        android:padding="0dp" />
+
+
+</RelativeLayout>

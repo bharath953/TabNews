@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="130dp">
+
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:scaleType="centerCrop"
+        tools:targetApi="lollipop" />
+
+
+    <TextView
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@+id/image_view"
+        android:fontFamily="@font/benchnine_light"
+        android:maxLines="3"
+        android:text="News from news api"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/time_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/benchnine_light"
+        android:text="time"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/source_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/time_view"
+        android:layout_alignStart="@+id/title_view"
+        android:fontFamily="@font/benchnine_light"
+        android:text="Source"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp" />
+
+
+</RelativeLayout>
